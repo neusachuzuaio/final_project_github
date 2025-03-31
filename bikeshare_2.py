@@ -83,12 +83,12 @@ def load_data(city, month, day):
     # Filter by month if applicable
     if month != 'all':
         month_number = month.index(month) + 1
-        df = df[df['month'] == month_number]
+        df = df[df['month'] == month_number].lower()
 
         
     # Filter by day of week if applicable
     if day != 'all':
-        df = df[df['day_of_week'].str.lower() == day]
+        df = df[df['day_of_week'] == day].lower()
 
     """Check if the DataFrame is empty to avoid errors"""
     if (df.empty):
