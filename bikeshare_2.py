@@ -1,6 +1,7 @@
 import time
 import pandas as pd
 import numpy as np
+import math
 
 df = pd.read_csv('chicago.csv')
 
@@ -96,7 +97,12 @@ def load_data(city, month, day):
         return pd.DataFrame()
 
     return df
+"""Creating the function to calculate most common values"""
+def most_common_calculator(df,column_name, display_name):
+    most_common_value = df[column_name].mode()[0]
+    print(f"-Most common {display_name} is: {most_common_value}")
 
+    
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
@@ -110,28 +116,11 @@ def time_stats(df):
         return
 
     # TO DO: display the most common month
-    """Mode function to check the most common month"""
-    
-    popular_month=df['month'].mode()[0]
-    months=['January', 'February', 'March', 'April', 'May', 'June']
-    
-    """We subtract one on the popular_month to have the right month on the list."""
-    
-    common_month=months[popular_month - 1]
-    print('-The most common month is:',common_month)
-   
-    # TO DO: display the most common day of week
-    """Mode function to check the most common day of the week"""
-    
-    popular_day = df['day_of_week'].mode()[0]
-    print('-Most common day of the week is:',popular_day)
-
-    # TO DO: display the most common start hour
-    """Mode function to check the most common hour"""
-    
-    df['hour']=df['Start Time'].dt.hour
-    popular_hour=df['hour'].mode()[0]
-    print('-Most common start hour is:',popular_hour)
+    most_common_calculator(df, 'month', 'month')
+    most_common_calculator(df, 'day_of_week', 'day of the week')
+    most_common_calculator(df, 'hour', 'start hour')
+    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('-'*40)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
