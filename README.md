@@ -15,11 +15,18 @@ In this project, the user will make use of Python to explore data related to bik
 
 _Description_
 
-Python
-Jupiter Notebook
-Git
-Integrated Development Environment (IDE)-Eg. Visual Studio Code, Notepad++, etc
+- Python
+- Jupiter Notebook
+- Git
+- Integrated Development Environment (IDE)-Eg. Visual Studio Code, Notepad++, etc
 
+**Required Libraries**
+
+_Description_
+
+- Pandas
+- Numpy
+- Time
 
 
 ### Files used
