@@ -10,6 +10,16 @@
 ### Description
 In this project, the user will make use of Python to explore data related to bike share systems for three major cities in the United States—Chicago, New York City, and Washington. The user will write code to import the data and answer interesting questions about it by computing descriptive statistics. The user will also write a script that takes in raw input to create an interactive experience in the terminal to present these statistics.
 
+###List of what software, firmware and hardware you may require.
+**Software Required**
+
+_Description_
+
+Python
+Jupiter Notebook
+Git
+Integrated Development Environment (IDE)-Eg. Visual Studio Code, Notepad++, etc
+
 
 
 ### Files used
